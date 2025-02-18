@@ -1,0 +1,35 @@
+{
+    "name": "djferreira/gcrud",
+    "description": "This package creates a layer structure to organize your laravel projects",
+    "type": "library",
+    "keywords": [
+        "laravel",
+        "crud",
+        "crud generator",
+        "layers architecture",
+        "laravel crud generator"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": "^8.0",
+        "illuminate/support": "^8.0|^9.0|^10.0|^11.0"
+    },
+    "authors": [
+        {
+            "name": "Davidson Ferreira",
+            "email": "davidsonjferreira@hotmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "DjFerreira\\Gcrud\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+          "providers": [
+            "DjFerreira\\Gcrud\\GcrudServiceProvider"
+          ]
+        }
+    }
+}

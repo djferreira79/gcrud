@@ -1,0 +1,77 @@
+<?php
+
+namespace App\BO;
+
+use App\Repositories\{{modelName}}Repository;
+use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Pagination\LengthAwarePaginator;
+use App\Models\{{modelName}};
+
+class {{modelName}}BO
+{
+    /**
+     * Return initialization page data
+     *
+     * @return Object
+     */
+    public function initialize(): Object
+    {
+        // Your code
+
+        return new \stdClass();
+    }
+
+    /**
+     * Displays a resource's list
+     *
+     * @return LengthAwarePaginator
+     */
+    public function index(): LengthAwarePaginator
+    {
+        return {{modelName}}Repository::index();
+    }
+
+    /**
+    * Get only active resources
+    *
+    * @return Collection
+    */
+    public function findActive{{modelNamePlural}}(): Collection
+    {
+        return {{modelName}}Repository::findActive{{modelNamePlural}}();
+    }
+
+    /**
+     * Store a new resource in storage
+     *
+     * @param \App\Http\Requests\{{modelName}}Request  $request
+     * @return {{modelName}}
+     */
+    public function store(array $request): {{modelName}}
+    {
+        return {{modelName}}Repository::store($request);
+    }
+
+    /**
+     * Update an specific resource in storage.
+     *
+     * @param \App\Http\Requests\{{modelName}}Request  $request
+     * @param \App\Models\{{modelName}}  ${{modelNameSingularLowerCase}}
+     * @return bool
+     */
+    public function update(array $request, ${{modelNameSingularLowerCase}}): bool
+    {
+        return {{modelName}}Repository::update($request, ${{modelNameSingularLowerCase}});
+    }
+
+    /**
+     * Delete an specific resource from storage.
+     *
+     * @param \App\Models\{{modelName}}  ${{modelNameSingularLowerCase}}
+     * @return bool
+     */
+    public function destroy(${{modelNameSingularLowerCase}}): bool
+    {
+        return {{modelName}}Repository::destroy(${{modelNameSingularLowerCase}});
+    }
+}

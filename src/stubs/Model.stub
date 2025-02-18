@@ -1,0 +1,21 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+class {{modelName}} extends Model
+{
+    use Traits\Scope;
+
+    protected $guarded = ['id'];{{tableDeclaration}}{{timestamps}}
+
+    /**
+     * Attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        // "name",
+    ];
+}
